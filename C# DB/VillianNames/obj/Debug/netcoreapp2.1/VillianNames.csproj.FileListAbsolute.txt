@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\bin\Debug\netcoreapp2.1\VillianNames.deps.json
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\bin\Debug\netcoreapp2.1\VillianNames.runtimeconfig.json
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\bin\Debug\netcoreapp2.1\VillianNames.runtimeconfig.dev.json
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\bin\Debug\netcoreapp2.1\VillianNames.dll
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\obj\Debug\netcoreapp2.1\VillianNames.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\obj\Debug\netcoreapp2.1\VillianNames.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\obj\Debug\netcoreapp2.1\VillianNames.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\obj\Debug\netcoreapp2.1\VillianNames.AssemblyInfo.cs
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\bin\Debug\netcoreapp2.1\VillianNames.pdb
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\obj\Debug\netcoreapp2.1\VillianNames.dll
+C:\Users\User\source\repos\Ado.NET Exercise\VillianNames\obj\Debug\netcoreapp2.1\VillianNames.pdb
