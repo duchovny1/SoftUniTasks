@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\bin\Debug\netcoreapp2.1\Entity Framework Introduction.deps.json
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\bin\Debug\netcoreapp2.1\Entity Framework Introduction.runtimeconfig.json
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\bin\Debug\netcoreapp2.1\Entity Framework Introduction.runtimeconfig.dev.json
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\bin\Debug\netcoreapp2.1\Entity Framework Introduction.dll
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\bin\Debug\netcoreapp2.1\Entity Framework Introduction.pdb
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\obj\Debug\netcoreapp2.1\Entity Framework Introduction.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\obj\Debug\netcoreapp2.1\Entity Framework Introduction.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\obj\Debug\netcoreapp2.1\Entity Framework Introduction.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\obj\Debug\netcoreapp2.1\Entity Framework Introduction.AssemblyInfo.cs
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\obj\Debug\netcoreapp2.1\Entity Framework Introduction.dll
+C:\Users\User\source\repos\Entity Framework Introduction\Entity Framework Introduction\obj\Debug\netcoreapp2.1\Entity Framework Introduction.pdb
