@@ -15,7 +15,7 @@ namespace SoftUni
         {
             SoftUniContext context = new SoftUniContext();
 
-            string result = GetEmployeesInPeriod(context);
+            string result = GetAddressesByTown(context);
 
             Console.WriteLine(result);
         }
@@ -99,7 +99,8 @@ namespace SoftUni
 
         public static string AddNewAddressToEmployee(SoftUniContext context)
         {
-            Address address = new Address {
+            Address address = new Address
+            {
 
                 AddressText = "Vitoshka 15",
                 TownId = 4
@@ -115,7 +116,7 @@ namespace SoftUni
             StringBuilder sb = new StringBuilder();
 
             var employees = context.Employees.OrderByDescending(e => e.AddressId)
-                .Select(e=> e.Address.AddressText)
+                .Select(e => e.Address.AddressText)
                 .Take(10).ToList();
 
             foreach (var item in employees)
@@ -168,6 +169,34 @@ namespace SoftUni
             return sb.ToString().TrimEnd();
 
 
+        }
+
+        public static string GetAddressesByTown(SoftUniContext context)
+        {
+            //            Find all addresses, ordered by the number of employees who live there(descending), then by town name
+            //(ascending), and finally by address text(ascending).Take only the first 10 addresses.For each address return it in
+            //the format &quot; &lt; AddressText & gt;, &lt; TownName & gt; -&lt; EmployeeCount & gt; employees & quot;
+
+
+            var addresses = context.Addresses.
+                Select(e => new
+            {
+                e.AddressText,
+                e.Town.Name,
+                e.Employees.Count
+            }).OrderByDescending(e=>e.Count).ThenBy(e=>e.Name).ThenBy(e=>e.AddressText)
+            .Take(10).ToList();
+
+               
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var a in addresses)
+            {
+                sb.AppendLine($"{a.AddressText}, {a.Name} - {a.Count} employees");
+            }
+
+            return sb.ToString();
         }
     }
 }
