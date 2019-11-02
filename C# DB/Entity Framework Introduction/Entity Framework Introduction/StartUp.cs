@@ -3,6 +3,7 @@ using SoftUni.Data;
 using SoftUni.Models;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 
@@ -14,7 +15,7 @@ namespace SoftUni
         {
             SoftUniContext context = new SoftUniContext();
 
-            string result = AddNewAddressToEmployee(context);
+            string result = GetEmployeesInPeriod(context);
 
             Console.WriteLine(result);
         }
@@ -123,6 +124,50 @@ namespace SoftUni
             }
 
             return sb.ToString().TrimEnd();
+        }
+
+        public static string GetEmployeesInPeriod(SoftUniContext context)
+        {
+            var employeesProjects = context.Employees.Where(e => e.EmployeesProjects
+            .Any(p => p.Project.StartDate.Year >= 2001 && p.Project.StartDate.Year <= 2003))
+            .Select(e => new
+            {
+                EmployeeName = e.FirstName + " " + e.LastName,
+                ManagerName = e.Manager.FirstName + " " + e.Manager.LastName,
+                Projects = e.EmployeesProjects
+                .Select(p => new
+                {
+                    ProjectName = p.Project.Name,
+                    StartDate = p.Project.StartDate,
+                    EndDate = p.Project.EndDate
+                })
+                .ToList()
+            })
+            .Take(10)
+            .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var e in employeesProjects)
+            {
+                sb.AppendLine($"{e.EmployeeName} - Manager: {e.ManagerName}");
+
+                foreach (var project in e.Projects)
+                {
+                    var startDate = project.StartDate
+                        .ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+
+                    var endDate = project.EndDate == null ? "not finished" : project.EndDate.Value
+                        .ToString("M/d/yyyy h:mm:ss tt", CultureInfo.InvariantCulture);
+
+                    sb.AppendLine($"--{project.ProjectName} - {startDate} - {endDate}");
+
+                }
+            }
+
+            return sb.ToString().TrimEnd();
+
+
         }
     }
 }
