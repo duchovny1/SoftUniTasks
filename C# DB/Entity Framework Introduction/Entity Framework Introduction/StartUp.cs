@@ -15,7 +15,7 @@ namespace SoftUni
         {
             SoftUniContext context = new SoftUniContext();
 
-            string result = GetEmployeesByFirstNameStartingWithSa(context);
+            string result = RemoveTown(context);
 
             Console.WriteLine(result);
         }
@@ -267,8 +267,9 @@ namespace SoftUni
 
             var projects = context.Projects.OrderByDescending(p => p.StartDate)
                 .Take(10)
-                .OrderBy(p=>p.Name)
-                .Select(p => new {
+                .OrderBy(p => p.Name)
+                .Select(p => new
+                {
                     p.Name,
                     p.Description,
                     p.StartDate
@@ -293,7 +294,7 @@ namespace SoftUni
 
             var employees = context.Employees.Where(d => d.Department.Name == "Engineering" ||
             d.Department.Name == "Tool Design" || d.Department.Name == "Marketing" || d.Department.Name == "Information Services");
-               
+
 
             foreach (var e in employees)
             {
@@ -323,7 +324,7 @@ namespace SoftUni
         public static string GetEmployeesByFirstNameStartingWithSa(SoftUniContext context)
         {
             var employees = context.Employees.Where(e => e.FirstName.StartsWith("Sa"))
-                .OrderBy(e=> e.FirstName)
+                .OrderBy(e => e.FirstName)
                 .ThenBy(e => e.LastName)
                 .Select(e => new
                 {
@@ -341,6 +342,36 @@ namespace SoftUni
             }
 
             return sb.ToString().TrimEnd();
+        }
+
+        public static string RemoveTown(SoftUniContext context)
+        {
+            var townToDelete = context.Towns.First(t => t.Name == "Seattle");
+
+            var addressesToRemove = context.Addresses.Where(e => e.Town == townToDelete);
+
+
+            var employeeToRemoveAddress = context.Employees.Where(e => addressesToRemove.Contains(e.Address));
+
+            foreach (var e in employeeToRemoveAddress)
+            {
+                e.AddressId = null;
+            }
+
+            foreach (var a in addressesToRemove)
+            {
+                context.Addresses.Remove(a);
+            }
+            //context.Addresses.RemoveRange(addressesToRemove);
+
+            int addressesCount = addressesToRemove.Count();
+
+            context.Towns.Remove(townToDelete);
+
+            context.SaveChanges();
+
+            return $"{addressesCount} in Seattle were deleted";
+
         }
     }
 }
