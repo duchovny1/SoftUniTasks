@@ -346,32 +346,39 @@ namespace SoftUni
 
         public static string RemoveTown(SoftUniContext context)
         {
-            var townToDelete = context.Towns.First(t => t.Name == "Seattle");
+            var employees = context.Employees
+                .Where(e => e.Address.Town.Name == "Seattle")
+                .ToList();
 
-            var addressesToRemove = context.Addresses.Where(e => e.Town == townToDelete);
-
-
-            var employeeToRemoveAddress = context.Employees.Where(e => addressesToRemove.Contains(e.Address));
-
-            foreach (var e in employeeToRemoveAddress)
+            foreach (var employee in employees)
             {
-                e.AddressId = null;
+                employee.AddressId = null;
+                context.SaveChanges();
             }
 
-            foreach (var a in addressesToRemove)
+            var towns = context.Towns
+                .Where(t => t.Name == "Seattle")
+                .ToList();
+
+            var addresses = context.Addresses
+                .Where(a => a.Town.Name == "Seattle")
+                .ToList();
+
+            int count = addresses.Count();
+
+            foreach (var address in addresses)
             {
-                context.Addresses.Remove(a);
+                context.Addresses.Remove(address);
+                context.SaveChanges();
             }
-            //context.Addresses.RemoveRange(addressesToRemove);
 
-            int addressesCount = addressesToRemove.Count();
+            foreach (var town in towns)
+            {
+                context.Towns.Remove(town);
+                context.SaveChanges();
+            }
 
-            context.Towns.Remove(townToDelete);
-
-            context.SaveChanges();
-
-            return $"{addressesCount} in Seattle were deleted";
-
+            return $"{count} addresses in Seattle were deleted";
         }
     }
 }
