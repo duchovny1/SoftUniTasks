@@ -75,6 +75,11 @@
                 .WithMany(p => p.Sales)
                 .HasForeignKey(s => s.StoreId);
 
+            //set GETDATE() function for default value to Date property in Class Sale
+
+            modelBuilder.Entity<Sale>()
+                .Property(p => p.Date)
+                .HasDefaultValueSql("GETDATE()");
 
         }
     }
