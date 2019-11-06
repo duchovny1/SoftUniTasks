@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Hospital Database\StartUp\bin\Debug\netcoreapp2.1\Sales Database.deps.json
+C:\Users\User\source\repos\Hospital Database\StartUp\bin\Debug\netcoreapp2.1\Sales Database.runtimeconfig.json
+C:\Users\User\source\repos\Hospital Database\StartUp\bin\Debug\netcoreapp2.1\Sales Database.runtimeconfig.dev.json
+C:\Users\User\source\repos\Hospital Database\StartUp\bin\Debug\netcoreapp2.1\Sales Database.dll
+C:\Users\User\source\repos\Hospital Database\StartUp\obj\Debug\netcoreapp2.1\Sales Database.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Hospital Database\StartUp\obj\Debug\netcoreapp2.1\Sales Database.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Hospital Database\StartUp\obj\Debug\netcoreapp2.1\Sales Database.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Hospital Database\StartUp\obj\Debug\netcoreapp2.1\Sales Database.AssemblyInfo.cs
+C:\Users\User\source\repos\Hospital Database\StartUp\bin\Debug\netcoreapp2.1\Sales Database.pdb
+C:\Users\User\source\repos\Hospital Database\StartUp\obj\Debug\netcoreapp2.1\Sales Database.dll
+C:\Users\User\source\repos\Hospital Database\StartUp\obj\Debug\netcoreapp2.1\Sales Database.pdb
