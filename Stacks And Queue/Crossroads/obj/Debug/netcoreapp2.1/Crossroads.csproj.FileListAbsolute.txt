@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\bin\Debug\netcoreapp2.1\Crossroads.deps.json
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\bin\Debug\netcoreapp2.1\Crossroads.runtimeconfig.json
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\bin\Debug\netcoreapp2.1\Crossroads.runtimeconfig.dev.json
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\bin\Debug\netcoreapp2.1\Crossroads.dll
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\bin\Debug\netcoreapp2.1\Crossroads.pdb
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\obj\Debug\netcoreapp2.1\Crossroads.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\obj\Debug\netcoreapp2.1\Crossroads.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\obj\Debug\netcoreapp2.1\Crossroads.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\obj\Debug\netcoreapp2.1\Crossroads.AssemblyInfo.cs
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\obj\Debug\netcoreapp2.1\Crossroads.dll
+C:\Users\User\source\repos\Stacks And Queue\Crossroads\obj\Debug\netcoreapp2.1\Crossroads.pdb

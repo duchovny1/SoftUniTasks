@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Stacks And Queue\Club Party\bin\Debug\netcoreapp2.1\Make a Salad.deps.json
+C:\Users\User\source\repos\Stacks And Queue\Club Party\bin\Debug\netcoreapp2.1\Make a Salad.runtimeconfig.json
+C:\Users\User\source\repos\Stacks And Queue\Club Party\bin\Debug\netcoreapp2.1\Make a Salad.runtimeconfig.dev.json
+C:\Users\User\source\repos\Stacks And Queue\Club Party\bin\Debug\netcoreapp2.1\Make a Salad.dll
+C:\Users\User\source\repos\Stacks And Queue\Club Party\bin\Debug\netcoreapp2.1\Make a Salad.pdb
+C:\Users\User\source\repos\Stacks And Queue\Club Party\obj\Debug\netcoreapp2.1\Make a Salad.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Stacks And Queue\Club Party\obj\Debug\netcoreapp2.1\Make a Salad.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Stacks And Queue\Club Party\obj\Debug\netcoreapp2.1\Make a Salad.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Stacks And Queue\Club Party\obj\Debug\netcoreapp2.1\Make a Salad.AssemblyInfo.cs
+C:\Users\User\source\repos\Stacks And Queue\Club Party\obj\Debug\netcoreapp2.1\Make a Salad.dll
+C:\Users\User\source\repos\Stacks And Queue\Club Party\obj\Debug\netcoreapp2.1\Make a Salad.pdb

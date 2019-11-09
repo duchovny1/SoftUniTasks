@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\bin\Debug\netcoreapp2.1\Trojan invasion.deps.json
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\bin\Debug\netcoreapp2.1\Trojan invasion.runtimeconfig.json
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\bin\Debug\netcoreapp2.1\Trojan invasion.runtimeconfig.dev.json
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\bin\Debug\netcoreapp2.1\Trojan invasion.dll
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\bin\Debug\netcoreapp2.1\Trojan invasion.pdb
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\obj\Debug\netcoreapp2.1\Trojan invasion.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\obj\Debug\netcoreapp2.1\Trojan invasion.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\obj\Debug\netcoreapp2.1\Trojan invasion.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\obj\Debug\netcoreapp2.1\Trojan invasion.AssemblyInfo.cs
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\obj\Debug\netcoreapp2.1\Trojan invasion.dll
+C:\Users\User\source\repos\Stacks And Queue\Trojan invasion\obj\Debug\netcoreapp2.1\Trojan invasion.pdb

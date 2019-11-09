@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\bin\Debug\netcoreapp2.1\Simple Text Editor.deps.json
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\bin\Debug\netcoreapp2.1\Simple Text Editor.runtimeconfig.json
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\bin\Debug\netcoreapp2.1\Simple Text Editor.runtimeconfig.dev.json
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\bin\Debug\netcoreapp2.1\Simple Text Editor.dll
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\bin\Debug\netcoreapp2.1\Simple Text Editor.pdb
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\obj\Debug\netcoreapp2.1\Simple Text Editor.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\obj\Debug\netcoreapp2.1\Simple Text Editor.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\obj\Debug\netcoreapp2.1\Simple Text Editor.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\obj\Debug\netcoreapp2.1\Simple Text Editor.AssemblyInfo.cs
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\obj\Debug\netcoreapp2.1\Simple Text Editor.dll
+C:\Users\User\source\repos\Stacks And Queue\Simple Text Editor\obj\Debug\netcoreapp2.1\Simple Text Editor.pdb
