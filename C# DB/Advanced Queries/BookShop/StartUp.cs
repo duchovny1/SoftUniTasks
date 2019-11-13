@@ -8,6 +8,7 @@
     using System.Linq;
     using System.Diagnostics;
     using System.Text;
+    using System.Globalization;
 
     public class StartUp
     {
@@ -15,9 +16,9 @@
         {
             using (var db = new BookShopContext())
             {
-                int year = int.Parse(Console.ReadLine());
-
-                Console.WriteLine(GetBooksNotReleasedIn(db, year));
+                string genre = (Console.ReadLine());
+                
+                Console.WriteLine(GetBooksReleasedBefore(db, genre));
 
             }
         }
@@ -92,5 +93,57 @@
             return sb.ToString().TrimEnd();
         }
 
+        public static string GetBooksByCategory(BookShopContext context, string input)
+        {
+            List<string> categories = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToList();
+
+            List<string> booksToOutput = new List<string>();
+
+
+
+            foreach (var category in categories)
+            {
+                var books = context.BooksCategories.Where(x => x.Category.Name.ToLower() == category.ToLower())
+                    .Select(b => new
+                    {
+                        b.Book.Title
+                    }).ToList();
+
+                foreach (var book in books)
+                {
+                    booksToOutput.Add(book.Title);
+                }
+            }
+
+            booksToOutput = booksToOutput.OrderBy(x => x).ToList();
+           string result = string.Join(Environment.NewLine, booksToOutput);
+            return result;
+        }
+
+        public static string GetBooksReleasedBefore(BookShopContext context, string date)
+        {
+
+            DateTime dateTime = DateTime.ParseExact(date, "dd-MM-yyyy", CultureInfo.InvariantCulture);
+
+            var books = context.Books
+                .Select(b => new
+                {
+                    b.Title,
+                    b.EditionType,
+                    b.Price,
+                    b.ReleaseDate
+                }).Where(b => b.ReleaseDate < dateTime)
+                .OrderByDescending(b => b.ReleaseDate)
+                .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine($"{book.Title} - {book.EditionType} - ${book.Price:f2}");
+            }
+
+            return sb.ToString().TrimEnd();
+        }
     }
 }
