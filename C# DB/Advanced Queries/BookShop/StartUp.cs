@@ -17,8 +17,8 @@
             using (var db = new BookShopContext())
             {
                 string genre = (Console.ReadLine());
-                
-                Console.WriteLine(GetBooksReleasedBefore(db, genre));
+
+                Console.WriteLine(GetBookTitlesContaining(db, genre));
 
             }
         }
@@ -116,7 +116,7 @@
             }
 
             booksToOutput = booksToOutput.OrderBy(x => x).ToList();
-           string result = string.Join(Environment.NewLine, booksToOutput);
+            string result = string.Join(Environment.NewLine, booksToOutput);
             return result;
         }
 
@@ -142,6 +142,56 @@
             {
                 sb.AppendLine($"{book.Title} - {book.EditionType} - ${book.Price:f2}");
             }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string GetAuthorNamesEndingIn(BookShopContext context, string input)
+        {
+            var books = context.Books.Where(x => x.Author.FirstName.EndsWith(input))
+                .Select(a => new
+                {
+                    FullName = a.Author.FirstName + " " + a.Author.LastName
+
+                }).Distinct().OrderBy(x => x.FullName).ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var book in books)
+            {
+                sb.AppendLine(book.FullName);
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
+        public static string GetBookTitlesContaining(BookShopContext context, string input)
+        {
+            var books = context.Books
+                .Where(x => x.Title.ToLower().Contains(input.ToLower()))
+                .Select(x => new
+                {
+                    x.Title
+
+                }).OrderBy(t => t.Title).ToList();
+
+
+            //var books = context.Books
+            //    .Where(b => b.Title.IndexOf(input, StringComparison.OrdinalIgnoreCase) >= 0)
+            //    .Select(b => new
+            //    {
+            //        b.Title
+            //    })
+            //    .OrderBy(b => b.Title)
+            //    .ToList();
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (var b in books)
+            {
+                sb.AppendLine(b.Title);
+            }
+
 
             return sb.ToString().TrimEnd();
         }
