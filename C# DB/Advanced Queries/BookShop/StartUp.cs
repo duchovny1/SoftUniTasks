@@ -1,8 +1,13 @@
-﻿namespace BookShop
+﻿using AutoMapper;
+using BookShop.Data.ViewModels;
+using BookShop.Models;
+
+namespace BookShop
 {
     using BookShop.Models.Enums;
     using Data;
     using Initializer;
+    using AutoMapper;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -14,11 +19,20 @@
     {
         public static void Main()
         {
-            using (var db = new BookShopContext())
-            {
-                Console.WriteLine(RemoveBooks(db));
-            }
+            Mapper.Initialize(cfg => cfg.CreateMap<Book, BookDTO>());
+
+
+
+
+
+
+
+
         }
+        
+
+
+
 
         public static string GetBooksByAgeRestriction(BookShopContext context, string command)
         {
