@@ -24,7 +24,8 @@
             //employees
 
             this.CreateMap<Position, RegisterEmployeeViewModel>()
-                .ForMember(x => x.PositionId, y => y.MapFrom(s => s.Id));
+                .ForMember(x => x.PositionId, y => y.MapFrom(s => s.Id))
+                .ForMember(x => x.PositionName, y => y.MapFrom(s => s.Name));
 
             this.CreateMap<RegisterEmployeeInputModel, Employee>();
 
@@ -46,11 +47,16 @@
                 .ForMember(x => x.Employee, y => y.MapFrom(s => s.Employee.Name));
 
             //items
-            this.CreateMap<CreateItemInputModel, Item>()
-                .ForMember(x => x.CategoryId, y => y.MapFrom(s => s.CategoryId));
+            this.CreateMap<Category, CreateItemViewModel>()
+                .ForMember(x => x.CategoryId, y => y.MapFrom(s => s.Id))
+                .ForMember(x => x.CategoryName, y => y.MapFrom(s => s.Name));
+
+            this.CreateMap<CreateItemInputModel, Item>();
 
             this.CreateMap<Item, ItemsAllViewModels>()
                 .ForMember(x => x.Category, y => y.MapFrom(s => s.Category.Name));
+
+          
         }
     }
 }

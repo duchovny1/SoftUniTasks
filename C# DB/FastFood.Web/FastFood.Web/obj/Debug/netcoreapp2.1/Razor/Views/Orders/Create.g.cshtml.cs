@@ -63,7 +63,7 @@ using FastFood.Web;
             WriteLiteral("<h1 class=\"text-center\">Create Order</h1>\r\n<hr class=\"bg-secondary half-width\" />\r\n");
             EndContext();
             BeginContext(193, 1317, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c4ccf73fa7a1406fb73bbb107da3a573", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c2f86dea00ec46e3bda1c54357d0d8a2", async() => {
                 BeginContext(284, 346, true);
                 WriteLiteral(@"
     <div class=""form-group"">
@@ -85,7 +85,7 @@ using FastFood.Web;
                 WriteLiteral("                ");
                 EndContext();
                 BeginContext(717, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "54b4f95531dd4a7d87daed4e47362edc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "98be0bc367524cfb8805ad1b2279789b", async() => {
                     BeginContext(744, 8, false);
 #line 18 "C:\Repos\FastFood.Web\FastFood.Web\Views\Orders\Create.cshtml"
                                      Write(employee);
@@ -135,7 +135,7 @@ using FastFood.Web;
                 WriteLiteral("                ");
                 EndContext();
                 BeginContext(1024, 36, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8237f673c08b4b6dbfd788adb9a7bc4f", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("option", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6c6415de3771424d94727463ed03fa14", async() => {
                     BeginContext(1047, 4, false);
 #line 27 "C:\Repos\FastFood.Web\FastFood.Web\Views\Orders\Create.cshtml"
                                  Write(item);
