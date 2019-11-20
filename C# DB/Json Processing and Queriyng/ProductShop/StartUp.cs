@@ -17,7 +17,7 @@ namespace ProductShop
             {
                 //string usersJson = File.ReadAllText("./../../../Datasets/categories-products.json");
 
-                Console.WriteLine(GetSoldProducts(db));
+                Console.WriteLine(GetUsersWithProducts(db));
             }
         }
 
@@ -115,6 +115,60 @@ namespace ProductShop
             return usersSoldProductsJson;
         }
 
+        public static string GetCategoriesByProductsCount(ProductShopContext context)
+        {
+            var productsInCategories = context.Categories
+                .OrderByDescending(c => c.CategoryProducts.Count)
+                .Select(cp => new
+                {
+                    category = cp.Name,
+                    productsCount = cp.CategoryProducts.Count(),
+                    averagePrice = $"{cp.CategoryProducts.Average(x => x.Product.Price):f2}",
+                    totalRevenue = $"{cp.CategoryProducts.Sum(x => x.Product.Price):f2}"
+                })
+               .ToList();
+
+            var jsonProductsInCategories = JsonConvert.SerializeObject(productsInCategories);
+
+            return jsonProductsInCategories;
+        }
+
+        public static string GetUsersWithProducts(ProductShopContext context)
+        {
+            var usersResult = context.Users.Where(u => u.ProductsSold.Any(ps => ps.Buyer != null))
+            .OrderByDescending(x => x.ProductsSold.Where(ps => ps.Buyer != null).Count())
+            .Select(u => new
+            {
+                firstName = u.FirstName,
+                lastName = u.LastName,
+                age = u.Age,
+                soldProducts = new
+                {
+                    count = u.ProductsSold.Where(ps => ps.Buyer != null).Count(),
+                    products = u.ProductsSold.Where(ps => ps.Buyer != null).Select(ps => new
+                    {
+                        name = ps.Name,
+                        price = ps.Price
+
+                    }).ToList()
+                }
+
+            }).ToList();
+
+            var resultJson = new
+            {
+                usersCount = usersResult.Count,
+                users = usersResult
+            };
+
+            var output = JsonConvert.SerializeObject(resultJson, new JsonSerializerSettings()
+            {
+                Formatting = Formatting.Indented,
+                NullValueHandling = NullValueHandling.Ignore
+            });
+
+            return output;
+        }
 
     }
 }
