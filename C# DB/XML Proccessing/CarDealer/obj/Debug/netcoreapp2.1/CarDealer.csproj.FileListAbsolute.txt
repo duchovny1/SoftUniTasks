@@ -1,0 +1,11 @@
+C:\Repos\XML Proccessing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.deps.json
+C:\Repos\XML Proccessing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.runtimeconfig.json
+C:\Repos\XML Proccessing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.runtimeconfig.dev.json
+C:\Repos\XML Proccessing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.dll
+C:\Repos\XML Proccessing\CarDealer\bin\Debug\netcoreapp2.1\CarDealer.pdb
+C:\Repos\XML Proccessing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.csprojAssemblyReference.cache
+C:\Repos\XML Proccessing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.csproj.CoreCompileInputs.cache
+C:\Repos\XML Proccessing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfoInputs.cache
+C:\Repos\XML Proccessing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.AssemblyInfo.cs
+C:\Repos\XML Proccessing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.dll
+C:\Repos\XML Proccessing\CarDealer\obj\Debug\netcoreapp2.1\CarDealer.pdb
