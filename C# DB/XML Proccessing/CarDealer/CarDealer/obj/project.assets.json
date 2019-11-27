@@ -5355,11 +5355,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Repos\\XML Proccessing\\CarDealer\\CarDealer.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\GitHub\\SoftUniTasks\\C# DB\\XML Proccessing\\CarDealer\\CarDealer\\CarDealer.csproj",
       "projectName": "CarDealer",
-      "projectPath": "C:\\Repos\\XML Proccessing\\CarDealer\\CarDealer.csproj",
+      "projectPath": "C:\\Users\\User\\Documents\\GitHub\\SoftUniTasks\\C# DB\\XML Proccessing\\CarDealer\\CarDealer\\CarDealer.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Repos\\XML Proccessing\\CarDealer\\obj\\",
+      "outputPath": "C:\\Users\\User\\Documents\\GitHub\\SoftUniTasks\\C# DB\\XML Proccessing\\CarDealer\\CarDealer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
