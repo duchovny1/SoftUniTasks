@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Singleton\Command Pattern\bin\Debug\netcoreapp2.1\Command Pattern.deps.json
+C:\Users\User\source\repos\Singleton\Command Pattern\bin\Debug\netcoreapp2.1\Command Pattern.runtimeconfig.json
+C:\Users\User\source\repos\Singleton\Command Pattern\bin\Debug\netcoreapp2.1\Command Pattern.runtimeconfig.dev.json
+C:\Users\User\source\repos\Singleton\Command Pattern\bin\Debug\netcoreapp2.1\Command Pattern.dll
+C:\Users\User\source\repos\Singleton\Command Pattern\bin\Debug\netcoreapp2.1\Command Pattern.pdb
+C:\Users\User\source\repos\Singleton\Command Pattern\obj\Debug\netcoreapp2.1\Command Pattern.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Singleton\Command Pattern\obj\Debug\netcoreapp2.1\Command Pattern.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Singleton\Command Pattern\obj\Debug\netcoreapp2.1\Command Pattern.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Singleton\Command Pattern\obj\Debug\netcoreapp2.1\Command Pattern.AssemblyInfo.cs
+C:\Users\User\source\repos\Singleton\Command Pattern\obj\Debug\netcoreapp2.1\Command Pattern.dll
+C:\Users\User\source\repos\Singleton\Command Pattern\obj\Debug\netcoreapp2.1\Command Pattern.pdb
