@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Filter.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Filter.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Filter.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Filter.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Filter.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Filter.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Filter.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Filter.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Filter.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Filter.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Filter.pdb

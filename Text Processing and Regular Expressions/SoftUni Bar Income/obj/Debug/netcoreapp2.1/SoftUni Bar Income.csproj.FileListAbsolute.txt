@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\bin\Debug\netcoreapp2.1\SoftUni Bar Income.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\bin\Debug\netcoreapp2.1\SoftUni Bar Income.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\bin\Debug\netcoreapp2.1\SoftUni Bar Income.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\bin\Debug\netcoreapp2.1\SoftUni Bar Income.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\bin\Debug\netcoreapp2.1\SoftUni Bar Income.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\obj\Debug\netcoreapp2.1\SoftUni Bar Income.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\obj\Debug\netcoreapp2.1\SoftUni Bar Income.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\obj\Debug\netcoreapp2.1\SoftUni Bar Income.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\obj\Debug\netcoreapp2.1\SoftUni Bar Income.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\obj\Debug\netcoreapp2.1\SoftUni Bar Income.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\SoftUni Bar Income\obj\Debug\netcoreapp2.1\SoftUni Bar Income.pdb

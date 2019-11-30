@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Phone Numbers.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Phone Numbers.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Phone Numbers.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Phone Numbers.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Phone Numbers.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Phone Numbers.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Phone Numbers.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Phone Numbers.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Phone Numbers.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Phone Numbers.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Phone Numbers.pdb

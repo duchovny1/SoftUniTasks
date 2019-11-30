@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\bin\Debug\netcoreapp2.1\Rage Quit.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\bin\Debug\netcoreapp2.1\Rage Quit.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\bin\Debug\netcoreapp2.1\Rage Quit.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\bin\Debug\netcoreapp2.1\Rage Quit.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\bin\Debug\netcoreapp2.1\Rage Quit.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\obj\Debug\netcoreapp2.1\Rage Quit.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\obj\Debug\netcoreapp2.1\Rage Quit.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\obj\Debug\netcoreapp2.1\Rage Quit.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\obj\Debug\netcoreapp2.1\Rage Quit.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Rage Quit\obj\Debug\netcoreapp2.1\Rage Quit.pdb

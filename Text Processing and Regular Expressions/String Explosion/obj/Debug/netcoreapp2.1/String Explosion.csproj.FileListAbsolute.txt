@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\bin\Debug\netcoreapp2.1\String Explosion.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\bin\Debug\netcoreapp2.1\String Explosion.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\bin\Debug\netcoreapp2.1\String Explosion.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\bin\Debug\netcoreapp2.1\String Explosion.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\bin\Debug\netcoreapp2.1\String Explosion.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\obj\Debug\netcoreapp2.1\String Explosion.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\obj\Debug\netcoreapp2.1\String Explosion.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\obj\Debug\netcoreapp2.1\String Explosion.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\obj\Debug\netcoreapp2.1\String Explosion.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\obj\Debug\netcoreapp2.1\String Explosion.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\String Explosion\obj\Debug\netcoreapp2.1\String Explosion.csprojAssemblyReference.cache

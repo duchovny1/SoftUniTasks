@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Processing and Regular Expressions.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Processing and Regular Expressions.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Processing and Regular Expressions.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Processing and Regular Expressions.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\bin\Debug\netcoreapp2.1\Text Processing and Regular Expressions.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Processing and Regular Expressions.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Processing and Regular Expressions.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Processing and Regular Expressions.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Processing and Regular Expressions.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Processing and Regular Expressions.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Text Processing and Regular Expressions\obj\Debug\netcoreapp2.1\Text Processing and Regular Expressions.pdb

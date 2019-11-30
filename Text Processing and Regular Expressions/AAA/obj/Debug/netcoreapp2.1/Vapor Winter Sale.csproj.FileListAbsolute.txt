@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\bin\Debug\netcoreapp2.1\Vapor Winter Sale.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\bin\Debug\netcoreapp2.1\Vapor Winter Sale.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\bin\Debug\netcoreapp2.1\Vapor Winter Sale.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\bin\Debug\netcoreapp2.1\Vapor Winter Sale.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\bin\Debug\netcoreapp2.1\Vapor Winter Sale.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\obj\Debug\netcoreapp2.1\Vapor Winter Sale.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\obj\Debug\netcoreapp2.1\Vapor Winter Sale.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\obj\Debug\netcoreapp2.1\Vapor Winter Sale.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\obj\Debug\netcoreapp2.1\Vapor Winter Sale.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\obj\Debug\netcoreapp2.1\Vapor Winter Sale.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\AAA\obj\Debug\netcoreapp2.1\Vapor Winter Sale.pdb

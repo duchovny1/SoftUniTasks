@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\bin\Debug\netcoreapp2.1\test text processing.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\bin\Debug\netcoreapp2.1\test text processing.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\bin\Debug\netcoreapp2.1\test text processing.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\bin\Debug\netcoreapp2.1\test text processing.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\bin\Debug\netcoreapp2.1\test text processing.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\obj\Debug\netcoreapp2.1\test text processing.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\obj\Debug\netcoreapp2.1\test text processing.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\obj\Debug\netcoreapp2.1\test text processing.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\obj\Debug\netcoreapp2.1\test text processing.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\obj\Debug\netcoreapp2.1\test text processing.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\test text processing\obj\Debug\netcoreapp2.1\test text processing.csprojAssemblyReference.cache

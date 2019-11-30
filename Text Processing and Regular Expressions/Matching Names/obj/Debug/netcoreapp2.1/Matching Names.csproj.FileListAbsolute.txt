@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Names.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Names.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Names.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Names.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\bin\Debug\netcoreapp2.1\Matching Names.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Names.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Names.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Names.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Names.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Names.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Matching Names\obj\Debug\netcoreapp2.1\Matching Names.csprojAssemblyReference.cache

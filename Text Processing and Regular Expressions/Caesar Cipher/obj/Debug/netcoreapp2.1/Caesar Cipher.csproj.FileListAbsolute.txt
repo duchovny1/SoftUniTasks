@@ -1,0 +1,10 @@
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\bin\Debug\netcoreapp2.1\Caesar Cipher.deps.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\bin\Debug\netcoreapp2.1\Caesar Cipher.runtimeconfig.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\bin\Debug\netcoreapp2.1\Caesar Cipher.runtimeconfig.dev.json
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\bin\Debug\netcoreapp2.1\Caesar Cipher.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\bin\Debug\netcoreapp2.1\Caesar Cipher.pdb
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\obj\Debug\netcoreapp2.1\Caesar Cipher.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\obj\Debug\netcoreapp2.1\Caesar Cipher.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\obj\Debug\netcoreapp2.1\Caesar Cipher.AssemblyInfo.cs
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\obj\Debug\netcoreapp2.1\Caesar Cipher.dll
+C:\Users\User\source\repos\Text Processing and Regular Expressions\Caesar Cipher\obj\Debug\netcoreapp2.1\Caesar Cipher.pdb
