@@ -1,27 +1,41 @@
 ﻿namespace CarDealer
 {
-    using System;
+    using AutoMapper;
+    using AutoMapper.QueryableExtensions;
     using CarDealer.Data;
+    using CarDealer.Dtos.Export;
     using CarDealer.Dtos.Import;
     using CarDealer.Models;
+    using System;
+    using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
+    using System.Text;
+    using System.Xml;
     using System.Xml.Serialization;
-    using AutoMapper;
 
     public class StartUp
     {
         public static void Main(string[] args)
         {
-            Mapper.Initialize(x =>
-            {
-                x.AddProfile<CarDealerProfile>();
-            });
+
+
+            Mapper.Initialize(cfg =>
+            cfg.AddProfile(new CarDealerProfile()));
 
             using (var db = new CarDealerContext())
             {
-                var inputXml = File.ReadAllText("./../../../Datasets/cars.xml");
-                ImportCars(db, inputXml);
+
+
+                // string suppliers = File.ReadAllText("./../../../Datasets/suppliers.xml");
+                string parts = File.ReadAllText("./../../../Datasets/parts.xml");
+                //string cars = File.ReadAllText("./../../../Datasets/cars.xml");
+                //string customers = File.ReadAllText("./../../../Datasets/customers.xml");
+                //string sales = File.ReadAllText("./../../../Datasets/sales.xml");
+
+                Console.WriteLine(GetLocalSuppliers(db));
             }
+
         }
 
         //problem 09
@@ -29,11 +43,11 @@
         {
             var rootElement = new XmlRootAttribute("Suppliers");
 
-            var serializer = new XmlSerializer(typeof(DTO_ImportSuppliers[]), rootElement);
+            var serializer = new XmlSerializer(typeof(ImportSupplierDto[]), rootElement);
 
             using (var reader = new StringReader(inputXml))
             {
-                var suppliers = (DTO_ImportSuppliers[])serializer.Deserialize(reader);
+                var suppliers = (ImportSupplierDto [])serializer.Deserialize(reader);
 
                 foreach (var dto in suppliers)
                 {
@@ -49,27 +63,48 @@
         }
 
 
-        // problem 10
-        public static string ImportCars(CarDealerContext context, string inputXml)
+        //problem 10
+        public static string ImportParts(CarDealerContext context, string inputXml)
         {
-            var rootElement = new XmlRootAttribute("Cars");
+            var serializer = new XmlSerializer(
+                typeof(ImportPartDto[]),
+                new XmlRootAttribute("Parts"));
 
-            var serializer = new XmlSerializer(typeof(DTO_ImportCars[]), rootElement);
+            var partsDtos = ((ImportPartDto[])serializer.Deserialize(new StringReader(inputXml)))
+                .Where(x => context.Suppliers.Any(s => x.SuppliedId == s.Id))
+                .ToArray();
 
-            using (var reader = new StringReader(inputXml))
+            var parts = Mapper.Map<Part[]>(partsDtos);
+            context.Parts.AddRange(parts);
+            context.SaveChanges();
+
+            return $"Successfully imported {parts.Length}";
+        }
+
+        //problem 15
+        public static string GetLocalSuppliers(CarDealerContext context)
+        {
+            var suppliers = context.Suppliers
+                .Where(x => x.IsImporter == false)
+                .ProjectTo<ExportLocalSuppliersDto>()
+                .ToArray();
+
+
+            var serializer = new XmlSerializer(
+                typeof(ExportLocalSuppliersDto[]),
+                new XmlRootAttribute("suppliers"));
+
+            StringBuilder sb = new StringBuilder();
+
+            var namespaces = new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty });
+
+            using (var writer = new StringWriter(sb))
             {
-                var cars = (DTO_ImportCars[])serializer.Deserialize(reader);
-
-                foreach (var dto in cars)
-                {
-                    var car = Mapper.Map<Car>(dto);
-
-                    context.Cars.Add(car);
-                }
+                serializer.Serialize(writer, suppliers, namespaces);
             }
-            int count = context.SaveChanges();
 
-            return $"Successfully imported {count}";
+            return sb.ToString().TrimEnd();
+
         }
     }
 }
