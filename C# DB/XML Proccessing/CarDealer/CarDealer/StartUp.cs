@@ -33,7 +33,7 @@
                 //string customers = File.ReadAllText("./../../../Datasets/customers.xml");
                 //string sales = File.ReadAllText("./../../../Datasets/sales.xml");
 
-                Console.WriteLine(GetLocalSuppliers(db));
+                Console.WriteLine(GetCarsWithTheirListOfParts(db));
             }
 
         }
@@ -106,5 +106,40 @@
             return sb.ToString().TrimEnd();
 
         }
+
+        //problem 17
+        public static string GetCarsWithTheirListOfParts(CarDealerContext context)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            var cars = context
+                .Cars
+                .OrderByDescending(c => c.TravelledDistance)
+                .ThenBy(c => c.Model)
+                .Take(5)
+                .ProjectTo<ExportCarsWithParts>()
+                .ToArray();
+
+            foreach (var car in cars)
+            {
+                car.Parts = car.Parts
+                    .OrderByDescending(p => p.Price)
+                    .ToArray();
+            }
+
+            var serializer = new XmlSerializer(typeof(ExportCarsWithParts[]),
+                new XmlRootAttribute("cars"));
+
+            var namespaces = new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty });
+
+            using (var writer = new StringWriter(sb))
+            {
+                serializer.Serialize(writer, cars, namespaces);
+
+            }
+
+            return sb.ToString().TrimEnd();
+        }
+
     }
 }
