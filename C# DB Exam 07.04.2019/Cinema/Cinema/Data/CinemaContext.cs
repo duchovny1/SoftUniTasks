@@ -41,8 +41,8 @@
 
 
             // relations in Projections table done here
-            builder.Entity<Projection>()
-                .HasKey(pr => new { pr.MovieId, pr.HallId });
+            //builder.Entity<Projection>()
+            //    .HasKey(pr => new { pr.MovieId, pr.HallId });
 
             builder.Entity<Projection>()
                  .HasOne(h => h.Hall)
@@ -56,12 +56,22 @@
 
             //relations in Tickets table
 
-            builder.Entity<Ticket>()
-                .HasKey(ck => new { ck.ProjectionId, ck.CustomerId });
+            //builder.Entity<Ticket>()
+            //    .HasKey(ck => new { ck.ProjectionId, ck.CustomerId });
 
             builder.Entity<Ticket>()
-                .HasMany(p => p.Projections);
-                
+                .HasOne(p => p.Projection)
+                .WithMany(t => t.Tickets)
+                .HasForeignKey(t => t.ProjectionId);
+
+            builder.Entity<Ticket>()
+                .HasOne(t => t.Customer)
+                .WithMany(c => c.Tickets)
+                .HasForeignKey(c => c.CustomerId);
+
+            builder.Entity<Projection>()
+                .HasMany(p => p.Tickets)
+                .WithOne(p => p.Projection);
 
         }
     }

@@ -9,13 +9,13 @@ namespace Cinema.Data.Models
     {
         public Ticket()
         {
-            Projections = new HashSet<Projection>();
+           
         }
         [Key]
         public int Id { get; set; }
 
         [Required]
-        [Range(0.01, Double.MaxValue)]
+        [Range(typeof(decimal), "0.01", "100000000000")]
         public decimal Price { get; set; }
 
         [Required]
@@ -26,7 +26,7 @@ namespace Cinema.Data.Models
         [Required]
         public int ProjectionId { get; set; }
 
-        public ICollection<Projection> Projections { get; set; }
+        public Projection Projection { get; set; }
 
     }
 }
