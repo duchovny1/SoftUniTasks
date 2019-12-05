@@ -22,6 +22,7 @@ namespace Cinema.Data.Models
         public bool Is3D { get; set; }
 
         public ICollection<Projection> Projections { get; set; }
+
         public ICollection<Seat> Seats { get; set; }
     }
 }
