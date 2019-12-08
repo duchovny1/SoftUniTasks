@@ -1,0 +1,11 @@
+C:\Repos\DB exam\TeisterMask\bin\Debug\netcoreapp2.1\TeisterMask.deps.json
+C:\Repos\DB exam\TeisterMask\bin\Debug\netcoreapp2.1\TeisterMask.runtimeconfig.json
+C:\Repos\DB exam\TeisterMask\bin\Debug\netcoreapp2.1\TeisterMask.runtimeconfig.dev.json
+C:\Repos\DB exam\TeisterMask\bin\Debug\netcoreapp2.1\TeisterMask.dll
+C:\Repos\DB exam\TeisterMask\bin\Debug\netcoreapp2.1\TeisterMask.pdb
+C:\Repos\DB exam\TeisterMask\obj\Debug\netcoreapp2.1\TeisterMask.csprojAssemblyReference.cache
+C:\Repos\DB exam\TeisterMask\obj\Debug\netcoreapp2.1\TeisterMask.csproj.CoreCompileInputs.cache
+C:\Repos\DB exam\TeisterMask\obj\Debug\netcoreapp2.1\TeisterMask.AssemblyInfoInputs.cache
+C:\Repos\DB exam\TeisterMask\obj\Debug\netcoreapp2.1\TeisterMask.AssemblyInfo.cs
+C:\Repos\DB exam\TeisterMask\obj\Debug\netcoreapp2.1\TeisterMask.dll
+C:\Repos\DB exam\TeisterMask\obj\Debug\netcoreapp2.1\TeisterMask.pdb

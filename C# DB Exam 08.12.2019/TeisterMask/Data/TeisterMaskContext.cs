@@ -1,0 +1,50 @@
+﻿namespace TeisterMask.Data
+{
+    using Microsoft.EntityFrameworkCore;
+    using TeisterMask.Data.Models;
+
+    public class TeisterMaskContext : DbContext
+    {
+        public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<Project> Projects { get; set; }
+
+        public DbSet<Task> Tasks { get; set; }
+
+        public DbSet<EmployeeTask> EmployeesTasks { get; set; }
+
+
+        public TeisterMaskContext() { }
+
+        public TeisterMaskContext(DbContextOptions options)
+            : base(options) { }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder
+                    .UseSqlServer(Configuration.ConnectionString);
+            }
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<EmployeeTask>()
+                .HasKey(pk => new { pk.EmployeeId, pk.TaskId });
+
+            builder.Entity<Task>()
+                .HasOne(x => x.Project)
+                .WithMany(x => x.Tasks)
+                .HasForeignKey(x => x.ProjectId);
+        
+            
+
+                
+                
+
+
+
+        }
+    }
+}
