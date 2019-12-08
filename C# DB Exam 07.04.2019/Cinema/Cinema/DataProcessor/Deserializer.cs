@@ -3,7 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
+    using System.Globalization;
+    using System.IO;
+    using System.Linq;
     using System.Text;
+    using System.Xml.Serialization;
     using AutoMapper;
     using Cinema.Data.Models;
     using Cinema.DataProcessor.ImportDto;
@@ -131,7 +135,52 @@
 
         public static string ImportProjections(CinemaContext context, string xmlString)
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+
+            var serializer = new XmlSerializer(typeof(ImportProjectionDto[]),
+                new XmlRootAttribute("Projections"));
+
+            using(StringReader reader = new StringReader(xmlString))
+            {
+               var projectionsDto = (ImportProjectionDto[])serializer.Deserialize(reader);
+
+                foreach (var projectionDto in projectionsDto)
+                {
+                    if (!IsValid(projectionDto))
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+                    Movie movie = context.Movies.First(x => x.Id == projectionDto.MovieId);
+
+                    if (movie == null)
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+                    Hall hall = context.Halls.First(x => x.Id == projectionDto.HallId);
+
+                    if(hall == null)
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+
+                    string format = "yyyy-MM-dd HH:mm:ss";
+                    DateTime date;
+                    if (DateTime.TryParseExact(projectionDto.DateTime, format,
+                        CultureInfo.InvariantCulture,
+                        DateTimeStyles.None, out date))
+                    {
+
+                    }
+                }
+            }
+
+            return sb.ToString().Trim();
         }
 
         public static string ImportCustomerTickets(CinemaContext context, string xmlString)
