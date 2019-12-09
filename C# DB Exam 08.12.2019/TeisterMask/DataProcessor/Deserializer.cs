@@ -55,7 +55,7 @@
                     DueDate = dto.DueDate,
                 };
 
-                if(!IsValid(project))
+                if (!IsValid(project))
                 {
                     sb.AppendLine(ErrorMessage);
                     continue;
@@ -83,8 +83,8 @@
                 }
 
                 project.Tasks = tasks;
-                
-               
+
+
 
                 if (IsValid(project))
                 {
@@ -99,7 +99,7 @@
 
             context.Projects.AddRange(projects);
             context.SaveChanges();
-            
+
 
             return sb.ToString().TrimEnd();
 
@@ -107,7 +107,63 @@
 
         public static string ImportEmployees(TeisterMaskContext context, string jsonString)
         {
-            throw new NotImplementedException();
+            var dtos = JsonConvert.DeserializeObject<ImportEmployeesDto[]>(jsonString);
+
+
+            StringBuilder sb = new StringBuilder();
+
+            List<Employee> employees = new List<Employee>();
+
+            foreach (var dto in dtos)
+            {
+                if (!IsValid(dto))
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                Employee employee = new Employee
+                {
+                    Username = dto.Username,
+                    Phone = dto.Phone,
+                    Email = dto.Email
+                };
+
+
+
+
+                var dtoTasksDistincted = dto.Tasks.Distinct();
+
+                foreach (var currentTask in dtoTasksDistincted)
+                {
+                    bool isExist = context.Tasks.Any(x => x.Id == currentTask);
+
+                    if (!isExist)
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+
+                    EmployeeTask employeeTask = new EmployeeTask
+                    {
+                        TaskId = currentTask
+                    };
+
+                    employee.EmployeesTasks.Add(employeeTask);
+                }
+
+
+                context.SaveChanges();
+                employees.Add(employee);
+                sb.AppendLine(string.Format(SuccessfullyImportedEmployee, employee.Username,
+                        employee.EmployeesTasks.Count));
+
+            }
+
+            context.Employees.AddRange(employees);
+            context.SaveChanges();
+            return sb.ToString().TrimEnd();
         }
 
         private static bool IsValid(object dto)
