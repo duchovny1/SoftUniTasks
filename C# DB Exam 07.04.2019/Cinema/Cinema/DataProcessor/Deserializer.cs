@@ -140,52 +140,112 @@
             var serializer = new XmlSerializer(typeof(ImportProjectionDto[]),
                 new XmlRootAttribute("Projections"));
 
-            using(StringReader reader = new StringReader(xmlString))
+            var projectionsDto = (ImportProjectionDto[])serializer.Deserialize(new StringReader(xmlString));
+
+
+            foreach (var projectionDto in projectionsDto)
             {
-               var projectionsDto = (ImportProjectionDto[])serializer.Deserialize(reader);
-
-                foreach (var projectionDto in projectionsDto)
+                if (!IsValid(projectionDto))
                 {
-                    if (!IsValid(projectionDto))
-                    {
-                        sb.AppendLine(ErrorMessage);
-                        continue;
-                    }
-
-                    Movie movie = context.Movies.First(x => x.Id == projectionDto.MovieId);
-
-                    if (movie == null)
-                    {
-                        sb.AppendLine(ErrorMessage);
-                        continue;
-                    }
-
-                    Hall hall = context.Halls.First(x => x.Id == projectionDto.HallId);
-
-                    if(hall == null)
-                    {
-                        sb.AppendLine(ErrorMessage);
-                        continue;
-                    }
-
-
-                    string format = "yyyy-MM-dd HH:mm:ss";
-                    DateTime date;
-                    if (DateTime.TryParseExact(projectionDto.DateTime, format,
-                        CultureInfo.InvariantCulture,
-                        DateTimeStyles.None, out date))
-                    {
-
-                    }
+                    sb.AppendLine(ErrorMessage);
+                    continue;
                 }
+
+                Movie movie = context.Movies.FirstOrDefault(x => x.Id == projectionDto.MovieId);
+
+                if (movie == null)
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                Hall hall = context.Halls.FirstOrDefault(x => x.Id == projectionDto.HallId);
+
+                if (hall == null)
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                Projection projection = new Projection
+                {
+                    MovieId = projectionDto.MovieId,
+                    HallId = projectionDto.HallId,
+                    DateTime = DateTime.ParseExact(projectionDto.DateTime, @"yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture)
+                };
+
+                context.Projections.Add(projection);
+                sb.AppendLine(string.Format(SuccessfulImportProjection,
+                    projection.Movie.Title,
+                    projection.DateTime.ToString(@"MM/dd/yyyy")));
             }
 
-            return sb.ToString().Trim();
+            context.SaveChanges();
+
+            return sb.ToString().TrimEnd();
+
         }
 
         public static string ImportCustomerTickets(CinemaContext context, string xmlString)
         {
-            throw new NotImplementedException();
+            StringBuilder sb = new StringBuilder();
+
+            var serializer = new XmlSerializer(typeof(ImportCustomersTickets[]),
+                new XmlRootAttribute("Customers"));
+
+            var customersWithTickets = (ImportCustomersTickets[])serializer.Deserialize(new StringReader(xmlString));
+
+            foreach (var dto in customersWithTickets)
+            {
+                if(!IsValid(dto))
+                {
+                    sb.AppendLine(ErrorMessage);
+                    continue;
+                }
+
+                Customer customer = new Customer
+                {
+                    FirstName = dto.FirstName,
+                    LastName = dto.LastName,
+                    Age = dto.Age,
+                    Balance = dto.Balance
+                };
+
+
+                List<Ticket> currentTickets = new List<Ticket>();
+
+                foreach (var dtoTicket in dto.Tickets)
+                {
+                    bool isVaildDto = IsValid(dtoTicket);
+                    bool isProjectionExist = context.Projections.Any(x => x.Id == dtoTicket.ProjectionId);
+
+                    if(!isVaildDto || !isProjectionExist)
+                    {
+                        sb.AppendLine(ErrorMessage);
+                        continue;
+                    }
+
+                    Ticket ticket = new Ticket()
+                    {
+                        ProjectionId = dtoTicket.ProjectionId,
+                        Price = dtoTicket.Price,
+                        CustomerId = customer.Id
+                    };
+
+                    currentTickets.Add(ticket);
+                }
+                customer.Tickets = currentTickets;
+
+                context.Tickets.AddRange(currentTickets);
+                context.Customers.Add(customer);
+                context.SaveChanges();
+                sb.AppendLine(string.Format(SuccessfulImportCustomerTicket,
+                    customer.FirstName,
+                    customer.LastName,
+                    customer.Tickets.Count()));
+            }
+           
+            return sb.ToString().TrimEnd();
         }
     }
 }

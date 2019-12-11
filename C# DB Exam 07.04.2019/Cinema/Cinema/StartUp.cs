@@ -16,13 +16,13 @@
 
             Mapper.Initialize(config => config.AddProfile<CinemaProfile>());
 
-            ResetDatabase(context, shouldDropDatabase: true);
+            ResetDatabase(context, shouldDropDatabase: false);
 
             var projectDir = GetProjectDirectory();
 
            ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
 
-            //ExportEntities(context, projectDir + @"ExportResults/");
+            ExportEntities(context, projectDir + @"ExportResults/");
 
             //using (var transaction = context.Database.BeginTransaction())
             //{
@@ -42,14 +42,14 @@
                     File.ReadAllText(baseDir + "halls-seats.json"));
             PrintAndExportEntityToFile(hallSeats, exportDir + "Actual Result - ImportHallSeats.txt");
 
-            //var projections = DataProcessor.Deserializer.ImportProjections(context,
-            //    File.ReadAllText(baseDir + "projections.xml"));
-            //PrintAndExportEntityToFile(projections, exportDir + "Actual Result - ImportProjections.txt");
+            var projections = DataProcessor.Deserializer.ImportProjections(context,
+                File.ReadAllText(baseDir + "projections.xml"));
+            PrintAndExportEntityToFile(projections, exportDir + "Actual Result - ImportProjections.txt");
 
-            //var customerTickets =
-            //    DataProcessor.Deserializer.ImportCustomerTickets(context,
-            //        File.ReadAllText(baseDir + "customers-tickets.xml"));
-            //PrintAndExportEntityToFile(customerTickets, exportDir + "Actual Result - ImportCustomerTickets.txt");
+            var customerTickets =
+                DataProcessor.Deserializer.ImportCustomerTickets(context,
+                    File.ReadAllText(baseDir + "customers-tickets.xml"));
+            PrintAndExportEntityToFile(customerTickets, exportDir + "Actual Result - ImportCustomerTickets.txt");
         }
 
         private static void ExportEntities(CinemaContext context, string exportDir)
@@ -58,9 +58,9 @@
             Console.WriteLine(exportTopMovies);
             File.WriteAllText(exportDir + "Actual Result - ExportTopMovies.json", exportTopMovies);
 
-            var exportTopCustomers = DataProcessor.Serializer.ExportTopCustomers(context, 14);
-            Console.WriteLine(exportTopCustomers);
-            File.WriteAllText(exportDir + "Actual Result - ExportTopCustomers.xml", exportTopCustomers);
+            //var exportTopCustomers = DataProcessor.Serializer.ExportTopCustomers(context, 14);
+            //Console.WriteLine(exportTopCustomers);
+            //File.WriteAllText(exportDir + "Actual Result - ExportTopCustomers.xml", exportTopCustomers);
         }
 
         private static void ResetDatabase(CinemaContext context, bool shouldDropDatabase = false)
