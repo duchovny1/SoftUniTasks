@@ -20,7 +20,7 @@
 
             var projectDir = GetProjectDirectory();
 
-           ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
+            //ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
 
             ExportEntities(context, projectDir + @"ExportResults/");
 
@@ -54,13 +54,13 @@
 
         private static void ExportEntities(CinemaContext context, string exportDir)
         {
-            var exportTopMovies = DataProcessor.Serializer.ExportTopMovies(context, 5);
-            Console.WriteLine(exportTopMovies);
-            File.WriteAllText(exportDir + "Actual Result - ExportTopMovies.json", exportTopMovies);
+            //var exportTopMovies = DataProcessor.Serializer.ExportTopMovies(context, 5);
+            //Console.WriteLine(exportTopMovies);
+            //File.WriteAllText(exportDir + "Actual Result - ExportTopMovies.json", exportTopMovies);
 
-            //var exportTopCustomers = DataProcessor.Serializer.ExportTopCustomers(context, 14);
-            //Console.WriteLine(exportTopCustomers);
-            //File.WriteAllText(exportDir + "Actual Result - ExportTopCustomers.xml", exportTopCustomers);
+            var exportTopCustomers = DataProcessor.Serializer.ExportTopCustomers(context, 14);
+            Console.WriteLine(exportTopCustomers);
+            File.WriteAllText(exportDir + "Actual Result - ExportTopCustomers.xml", exportTopCustomers);
         }
 
         private static void ResetDatabase(CinemaContext context, bool shouldDropDatabase = false)
